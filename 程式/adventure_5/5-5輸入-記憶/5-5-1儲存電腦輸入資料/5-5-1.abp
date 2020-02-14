@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1366">
+<PageBlocks>
+<Block genus-name="eeprom_read_int" id="637">
+<Location>
+<X>714</X>
+<Y>277</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="641" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="638" connector-kind="socket" connector-type="number" init-type="number" label="address" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="638">
+<Label>0</Label>
+<Location>
+<X>968</X>
+<Y>277</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="637" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_sn" id="641">
+<Location>
+<X>658</X>
+<Y>277</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="639" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="637" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="serial_println" id="639">
+<Location>
+<X>552</X>
+<Y>274</Y>
+</Location>
+<BeforeBlockId>635</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="641" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="delay" id="635">
+<Location>
+<X>552</X>
+<Y>244</Y>
+</Location>
+<BeforeBlockId>313</BeforeBlockId>
+<AfterBlockId>639</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="636" connector-kind="socket" connector-type="number" init-type="number" label="毫秒" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="636">
+<Label>1000</Label>
+<Location>
+<X>698</X>
+<Y>247</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="635" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="eeprom_write_int" id="313">
+<Location>
+<X>552</X>
+<Y>190</Y>
+</Location>
+<BeforeBlockId>312</BeforeBlockId>
+<AfterBlockId>635</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="314" connector-kind="socket" connector-type="number" init-type="number" label="address" position-type="single"/>
+<BlockConnector con-block-id="315" connector-kind="socket" connector-type="number" init-type="number" label="data" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="315">
+<Label>5</Label>
+<Location>
+<X>790</X>
+<Y>217</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="313" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="314">
+<Label>0</Label>
+<Location>
+<X>790</X>
+<Y>193</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="313" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="program" id="312">
+<Location>
+<X>448</X>
+<Y>147</Y>
+</Location>
+<Sockets num-sockets="2">
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="設定" position-type="single"/>
+<BlockConnector con-block-id="313" connector-kind="socket" connector-type="cmd" init-type="cmd" label="loop" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
